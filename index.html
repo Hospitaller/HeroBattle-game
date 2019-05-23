@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <title>Strange battle</title>
+</head>
+
+<body>
+
+    <div class="gameWraper">
+
+        <form id="msform">
+            <fieldset>
+                <h2 class="fs-title">Create your Hero</h2>
+                <input id="nameHero" type="text" name="name" placeholder="Name" />
+                <select name="classHero" id="classHero">
+                    <option value="Warrior">Warrior</option>
+                    <option value="Sorcerry">Sorcerry</option>
+                </select>
+                <input id="startGame" type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+        </form>
+
+        <div class="container">
+            <div class="borderGame"></div>
+
+            <!--LEFT_SIDE_TAB-->
+            <div class="leftSideTab">
+                <div class="leftSideTab_info"></div>
+                <div class="leftSideTab_hero"></div>
+                <div class="titleTab">Tabs</div>
+            </div>
+
+            <!--LEFT-->
+            <div class="heroWraper">
+                <h2 id="displayHeroHP"></h2>
+                <h2 class="title">Parameter</h2>
+                <div class="heroName">
+                    <div class="wrap1">
+                        <h3 id="nameHeroList"></h3>
+                        <h4 id="roleHeroList"></h4>
+                    </div>
+                    <div class="wrap2">
+                        <h4 id="strHeroList"></h4>
+                        <h4 id="defHeroList"></h4>
+                    </div>
+                </div>
+                <h2 class="title">Attack & Defence</h2>
+                <div class="attackWraper">
+
+                    <div class="attackBlock">
+                        <label><input type="radio" name="attack" value="Head" id="attackHead" />Head</label>
+                        <label><input type="radio" name="attack" value="Body" id="attackBody" />Body</label>
+                        <label><input type="radio" name="attack" value="Legs" id="attackLegs" />Legs</label>
+                    </div>
+                    <div class="defenceBlock">
+                        <label><input type="radio" name="defence" value="Head" id="defenceHead" />Head</label>
+                        <label><input type="radio" name="defence" value="Body" id="defenceBody" />Body</label>
+                        <label><input type="radio" name="defence" value="Legs" id="defenceLegs" />Legs</label>
+                    </div>
+
+                </div>
+                <button id="attackBtn">Attack!!</button>
+
+            </div>
+
+            <!--CENTER-->
+            <div class="enemyWraper">
+
+                <div class="slashFx"></div>
+                <h2 id="displayHP"></h2>
+                <div class="enemyHP"></div>
+                <img src="img/enemy1.png" alt="">
+
+            </div>
+
+            <!--RIGHT-->
+            <div class="statistic">
+                <h4>Stst HERE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
